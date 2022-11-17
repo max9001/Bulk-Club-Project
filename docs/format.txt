@@ -1,6 +1,0 @@
-Date of purchase
-Customer number who bought the product
-Product description
-Price of product
-Quantity
- 
