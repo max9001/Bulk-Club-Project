@@ -65,7 +65,11 @@
     - MySQL
     - Postgres
     - MS SQL Server
-  - Sqlite (everything in one file, can store and fetch using SQL)
+    - Sqlite (everything in one file, can store and fetch using SQL)
     
     
+---
+# practice/play with these tools
+
+- 
   
