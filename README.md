@@ -1,3 +1,35 @@
+# Bulk Club has two types of members: Regular and Executive  
+### Member information includes: 
+- Member name 
+- Membership number 
+- Membership type 
+- Membership expiration date 
+- Total amount spent (running total) 
+- Rebate amount (Executive members only) 
+
+### A membership information file (warehouse shoppers) is provided with 
+the following format: 
+ 
+- Customer name   
+- Customer membership number   
+- Type of customer – Regular or Executive 
+- Membership expiration date 
+
+### Seven sales files are provided with the following format: 
+
+- Purchase date 
+- Customer membership number   
+- Item purchased 
+- Sales price quantity purchased  
+
+
+
+
+
+---
+---
+---
+
 # Bulk Club Project	
 Your team is to write a program that supports the Bulk Club.   At least one class must contain a pointer (a copy constructor needs to be written and tested).   Highlight the above.  Your team is to write at least 10 agile stories (including description, tasks, test scenarios, and story points) before software is developed).  Your team must use an agile management tool (e.g. GITHUB, Twilio, etc), Graphical User Interface (GUI) such as QT, DOXYGEN, and GITHUB.    Only team members should have access to their repository.
 
