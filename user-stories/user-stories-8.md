@@ -5,6 +5,7 @@ As a programmer I want to be able to create purchases of my choice for the new m
 
 ### description
 test purchases to make sure program works
+manually add in new transactions
 
 ### special feature (*optional*)
 
