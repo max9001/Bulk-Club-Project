@@ -1,34 +1,24 @@
-#include "loginwindow.h"
-#include "ui_loginwindow.h"
++#include "loginwindow.h"
+#include <string>
+using namespace std;
 
-LoginWindow::LoginWindow(QWidget *parent) :
-		QDialog(parent),
-		ui(new Ui::LoginWindow)
+LoginWindow::LoginWindow(QWidget *parent)
 {
-		ui->setupUi(this);
+    ui->setupUi(this);
+    username = "\0";
+    password = "\0";
 }
+LoginWindow::~LoginWindow() {}
 
-LoginWindow::~LoginWindow()
+void LoginWindow::onLoginButtonClicked()
 {
-		delete ui;
+    password = ui->passwordInput->text().toStdString();
+    username = ui->usernameInput->text().toStdString();
+    //first finds username in DB and uses it to verify password
+
+    if(password == passwordInDB)
+    {
+        AdminWindow->show();
+    }
+    else{}//password incorrect
 }
-
-void LoginWindow::on_loginPushButton_clicked(){
-	if (checked) {
-		adminWindow = new AdminWindow(this);                  // Create a new HelpWindow object
-		adminWindow->show();
-		this->hide();
-	}
-	else {
-		managerWindow = new ManagerWindow(this);                  // Create a new HelpWindow object
-		managerWindow->show();
-		this->hide();
-	}
-
-}
-
-void LoginWindow::on_adminCheckBox_stateChanged(int arg1)
-{
-	checked = arg1;
-}
-

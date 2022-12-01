@@ -1,35 +1,27 @@
-#ifndef LOGINWINDOW_H
++#ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
 
+#include <QMainWindow>
 
-#include "adminwindowWidget.h"
-#include "managerwindow.h"
-#include <QDialog>
+QT_BEGIN_NAMESPACE
+namespace Ui { class LoginWindow; }
+QT_END_NAMESPACE
 
-namespace Ui {
-class LoginWindow;
-}
-
-class LoginWindow : public QDialog
+class LoginWindow : public QMainWindow
 {
-		Q_OBJECT
+    Q_OBJECT
 
 public:
-		explicit LoginWindow(QWidget *parent = nullptr);
-		~LoginWindow();
+    LoginWindow(QWidget *parent = nullptr);
+    ~LoginWindow();
 
 private:
-		Ui::LoginWindow *ui;
-
-
-		int checked = 0;
-
-		ManagerWindow *managerWindow;
-		AdminWindow *adminWindow;
-
+    Ui::LoginWindow *ui;
+    string username;
+    string password;
 private slots:
-		void on_loginPushButton_clicked();
-		void on_adminCheckBox_stateChanged(int arg1);
+    void onLoginButtonClicked();
 };
+
 
 #endif // LOGINWINDOW_H
