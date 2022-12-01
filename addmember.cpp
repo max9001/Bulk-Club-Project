@@ -42,10 +42,10 @@ else
    {
    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-   db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
+   db.setDatabaseName(Path::getDBPath());
 
 
-   db.open();                                                                  //the .db file should be kept within the repository for now
+   db.open();                                                                  
 
    QSqlQuery query(db);
    query.prepare("INSERT INTO Members VALUES ((:name),(:id),(:type),(:expiry),(:cost),(:rebate))");

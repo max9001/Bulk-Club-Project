@@ -16,9 +16,9 @@ memberPurchases::memberPurchases(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());
 
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.open();                                                                  
 
     QSqlQueryModel * model0 = new QSqlQueryModel();
    //model is readonly access to query results
@@ -59,8 +59,8 @@ memberPurchases::~memberPurchases()
 void memberPurchases::on_idSearchButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QString ID = ui->memberIDLineEdit->text();
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -94,8 +94,8 @@ void memberPurchases::on_idSearchButton_clicked()
 void memberPurchases::on_nameSearchButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QString name = ui->memberNameLineEdit->text();
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -143,10 +143,10 @@ void memberPurchases::on_DisplayAllPushButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());
 
 
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.open();                                                                  
 
     QSqlQueryModel * model0 = new QSqlQueryModel();
    //model is readonly access to query results

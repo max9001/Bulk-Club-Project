@@ -16,8 +16,8 @@ rebateWindow::rebateWindow(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QSqlTableModel * model = new QSqlTableModel();
     model->setTable("Members");

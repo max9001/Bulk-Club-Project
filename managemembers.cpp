@@ -15,8 +15,8 @@ managemembers::managemembers(QWidget *parent) :
     ui->setupUi(this);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();
    //model is readonly access to query results
@@ -41,8 +41,8 @@ void managemembers::on_searchPushButton_clicked()
     QString input = ui->searchLineEdit->text();
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();
    //model is readonly access to query results
@@ -60,8 +60,8 @@ void managemembers::on_searchPushButton_clicked()
 void managemembers::on_DisplayAllPushButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();
     QSqlQuery query(db);
@@ -90,8 +90,8 @@ void managemembers::on_deletePushButton_clicked()
    if( QMessageBox::question(this, "Remove Member", "Are you sure you want to delete this member?"))
    {
        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-       db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
-       db.open();                                                                  //the .db file should be kept within the repository for now
+       db.setDatabaseName(Path::getDBPath());
+       db.open();                                                                  
 
 
        QSqlQuery query(db);
