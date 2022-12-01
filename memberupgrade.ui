@@ -16,15 +16,15 @@
   <widget class="QPushButton" name="cancelButton">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>320</y>
-     <width>75</width>
-     <height>24</height>
+     <x>880</x>
+     <y>330</y>
+     <width>93</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -34,97 +34,97 @@
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
+  <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>430</width>
-     <height>250</height>
+     <x>0</x>
+     <y>0</y>
+     <width>991</width>
+     <height>361</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QTableView" name="tableView_2">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>50</y>
-     <width>430</width>
-     <height>250</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>10</y>
-     <width>341</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Executive Members that Should Downgrade</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>10</y>
-     <width>281</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Regular Members that Should Upgrade</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="upgradeLabel">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>310</y>
-     <width>211</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Upgrades: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="downgradeLabel">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>310</y>
-     <width>301</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Downgrades: </string>
-   </property>
+   <layout class="QHBoxLayout" name="memberLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="downgradeLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Executive Members that Should Downgrade</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="downgradeLabel">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Downgrades: </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="upgradeLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Regular Members that Should Upgrade</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView_2"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="upgradeLabel">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Upgrades: </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
