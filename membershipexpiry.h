@@ -15,6 +15,14 @@ public:
     explicit MembershipExpiry(QWidget *parent = nullptr);
     ~MembershipExpiry();
 
+private slots:
+
+    void on_searchButton_clicked();
+
+    void on_cancelButton_clicked();
+
+    void on_DisplayAllButton_clicked();
+
 private:
     Ui::MembershipExpiry *ui;
 };

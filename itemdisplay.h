@@ -4,19 +4,27 @@
 #include <QDialog>
 
 namespace Ui {
-class ItemDisplay;
+class itemDisplay;
 }
 
-class ItemDisplay : public QDialog
+class itemDisplay : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit ItemDisplay(QWidget *parent = nullptr);
-    ~ItemDisplay();
+    explicit itemDisplay(QWidget *parent = nullptr);
+    ~itemDisplay();
+
+private slots:
+    //void on_pushButton_clicked();
+
+    void on_searchButton_clicked();
+
+
+    void on_pushButton_clicked();
 
 private:
-    Ui::ItemDisplay *ui;
+    Ui::itemDisplay *ui;
 };
 
 #endif // ITEMDISPLAY_H

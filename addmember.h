@@ -15,6 +15,13 @@ public:
     explicit AddMember(QWidget *parent = nullptr);
     ~AddMember();
 
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_addMemberPushButton_clicked();
+
+    void on_ExpiryLineEdit_returnPressed();
+
 private:
     Ui::AddMember *ui;
 };
