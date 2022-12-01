@@ -1,4 +1,5 @@
 #include "logindialog.h"
+#include "global.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -75,7 +76,7 @@ void LoginDialog::slotAcceptLogin(){
     QString notFound = "Profile not found, check login information";
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
 
     db.open();                                                                  //the .db file should be kept within the repository for now
 

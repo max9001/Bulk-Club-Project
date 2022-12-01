@@ -1,5 +1,6 @@
 #include "manageinventory.h"
 #include "ui_manageinventory.h"
+#include "global.h"
 #include <QModelIndex>
 #include <QMessageBox>
 
@@ -10,7 +11,7 @@ ManageInventory::ManageInventory(QWidget *parent) :
     ui->setupUi(this);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
 
     db.open();                                                                  //the .db file should be kept within the repository for now
     model = new QSqlTableModel(NULL,db);

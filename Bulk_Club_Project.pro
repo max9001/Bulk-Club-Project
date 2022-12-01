@@ -29,6 +29,7 @@ SOURCES += \
 HEADERS += \
     addmember.h \
     admin.h \
+    global.h \
     itemdisplay.h \
     logindialog.h \
     manageinventory.h \

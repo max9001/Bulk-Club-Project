@@ -1,5 +1,6 @@
 #include "memberpurchases.h"
 #include "ui_memberpurchases.h"
+#include "global.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,7 +16,7 @@ memberPurchases::memberPurchases(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
 
     db.open();                                                                  //the .db file should be kept within the repository for now
 
@@ -58,7 +59,7 @@ memberPurchases::~memberPurchases()
 void memberPurchases::on_idSearchButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for now
 
     QString ID = ui->memberIDLineEdit->text();
@@ -93,7 +94,7 @@ void memberPurchases::on_idSearchButton_clicked()
 void memberPurchases::on_nameSearchButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for now
 
     QString name = ui->memberNameLineEdit->text();
@@ -142,7 +143,7 @@ void memberPurchases::on_DisplayAllPushButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
 
 
     db.open();                                                                  //the .db file should be kept within the repository for now

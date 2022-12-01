@@ -1,5 +1,6 @@
 #include "itemdisplay.h"
 #include "ui_itemdisplay.h"
+#include "global.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,7 +16,7 @@ itemDisplay::itemDisplay(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
 
     db.open();                                                                  //the .db file should be kept within the repository for now
 
@@ -46,7 +47,7 @@ void itemDisplay::on_searchButton_clicked()
 {
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for now
 
     QString item = ui->itemSearchBar->text();

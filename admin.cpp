@@ -1,5 +1,6 @@
 #include "admin.h"
 #include "ui_admin.h"
+#include "global.h"
 #include <QMessageBox>
 #include "salesreport.h"
 #include "managemembers.h"
@@ -20,7 +21,7 @@ void Admin::on_pushButton_clicked()
 {
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");
+    db.setDatabaseName(Path::DB_PATH);
 
     if(!db.open())
     {

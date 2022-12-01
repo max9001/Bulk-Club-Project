@@ -1,5 +1,6 @@
 #include "newpurchase.h"
 #include "ui_newpurchase.h"
+#include "global.h"
 
 newPurchase::newPurchase(QWidget *parent) :
     QWidget(parent),
@@ -7,7 +8,7 @@ newPurchase::newPurchase(QWidget *parent) :
 {
     ui->setupUi(this);
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
     db.open();//the .db file should be kept within the repository for now
 
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -48,7 +49,7 @@ void newPurchase::on_SubmitButton_clicked()
     QString itemName = ui->itemBox->currentText();
     QSqlRecord record;
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
     db.open();//the .db file should be kept within the repository for now
 
     QSqlQueryModel * model = new QSqlQueryModel();
