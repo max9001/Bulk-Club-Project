@@ -2,21 +2,26 @@
 #define MEMBERUPGRADE_H
 
 #include <QDialog>
+#include <QModelIndex>
 
 namespace Ui {
-class MemberUpgrade;
+class memberupgrade;
 }
 
-class MemberUpgrade : public QDialog
+class memberupgrade : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit MemberUpgrade(QWidget *parent = nullptr);
-    ~MemberUpgrade();
+    explicit memberupgrade(QWidget *parent = nullptr);
+    ~memberupgrade();
+
+private slots:
+    void on_cancelButton_clicked();
 
 private:
-    Ui::MemberUpgrade *ui;
+    Ui::memberupgrade *ui;
+    QModelIndex invalidIndex;
 };
 
 #endif // MEMBERUPGRADE_H

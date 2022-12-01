@@ -4,19 +4,22 @@
 #include <QWidget>
 
 namespace Ui {
-class RebateWindow;
+class rebateWindow;
 }
 
-class RebateWindow : public QWidget
+class rebateWindow : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit RebateWindow(QWidget *parent = nullptr);
-    ~RebateWindow();
+    explicit rebateWindow(QWidget *parent = nullptr);
+    ~rebateWindow();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
-    Ui::RebateWindow *ui;
+    Ui::rebateWindow *ui;
 };
 
 #endif // REBATEWINDOW_H
