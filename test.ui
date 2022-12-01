@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginWindow</class>
- <widget class="QDialog" name="LoginWindow">
+ <class>test</class>
+ <widget class="QDialog" name="test">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,30 +13,17 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="loginPushButton">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>230</y>
+     <x>100</x>
+     <y>160</y>
      <width>89</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Login</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="adminCheckBox">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>110</y>
-     <width>92</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>admin?</string>
+    <string>PushButton</string>
    </property>
   </widget>
  </widget>

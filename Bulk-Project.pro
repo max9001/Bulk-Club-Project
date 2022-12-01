@@ -9,17 +9,29 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminwindow.cpp \
     loginwindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    manageinventory.cpp \
+    managemembers.cpp \
+    managerwindow.cpp \
+    memberconversions.cpp
 
 HEADERS += \
+    adminwindow.h \
     loginwindow.h \
-    mainwindow.h
+    manageinventory.h \
+    managemembers.h \
+    managerwindow.h \
+    memberconversions.h
 
 FORMS += \
+    adminwindow.ui \
     loginwindow.ui \
-    mainwindow.ui
+    manageinventory.ui \
+    managemembers.ui \
+    managerwindow.ui \
+    memberconversions.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
