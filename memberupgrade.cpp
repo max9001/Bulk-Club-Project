@@ -16,7 +16,7 @@ memberupgrade::memberupgrade(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
 
     db.open();                                                                  //the .db file should be kept within the repository for now
 

@@ -21,7 +21,7 @@ void Admin::on_pushButton_clicked()
 {
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName(Path::DB_PATH);
+    db.setDatabaseName(Path::getDBPath());
 
     if(!db.open())
     {

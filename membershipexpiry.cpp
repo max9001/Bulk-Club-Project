@@ -15,7 +15,7 @@ MembershipExpiry::MembershipExpiry(QWidget *parent) :
     ui->setupUi(this);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for no
 
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -41,7 +41,7 @@ MembershipExpiry::~MembershipExpiry()
 void MembershipExpiry::on_searchButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for now
 
     QString date = ui->dateLineEdit->text();
@@ -67,7 +67,7 @@ void MembershipExpiry::on_cancelButton_clicked()
 void MembershipExpiry::on_DisplayAllButton_clicked()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(Path::DB_PATH);//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());//This line and the previous connect to the sqlite database at this file location,
     db.open();                                                                  //the .db file should be kept within the repository for no
 
     QSqlQueryModel * model = new QSqlQueryModel();
