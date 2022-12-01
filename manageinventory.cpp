@@ -2,13 +2,13 @@
 #include "ui_manageinventory.h"
 
 ManageInventory::ManageInventory(QWidget *parent) :
-		QDialog(parent),
-		ui(new Ui::ManageInventory)
+    QWidget(parent),
+    ui(new Ui::ManageInventory)
 {
-		ui->setupUi(this);
+    ui->setupUi(this);
 }
 
 ManageInventory::~ManageInventory()
 {
-		delete ui;
+    delete ui;
 }

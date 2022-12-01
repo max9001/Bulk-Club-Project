@@ -1,22 +1,22 @@
 #ifndef MANAGEINVENTORY_H
 #define MANAGEINVENTORY_H
 
-#include <QDialog>
+#include <QWidget>
 
 namespace Ui {
 class ManageInventory;
 }
 
-class ManageInventory : public QDialog
+class ManageInventory : public QWidget
 {
-		Q_OBJECT
+    Q_OBJECT
 
 public:
-		explicit ManageInventory(QWidget *parent = nullptr);
-		~ManageInventory();
+    explicit ManageInventory(QWidget *parent = nullptr);
+    ~ManageInventory();
 
 private:
-		Ui::ManageInventory *ui;
+    Ui::ManageInventory *ui;
 };
 
 #endif // MANAGEINVENTORY_H

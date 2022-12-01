@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>memberupgrade</class>
+ <widget class="QDialog" name="memberupgrade">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>984</width>
+    <height>359</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>320</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: rgb(241, 115, 0)</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>430</width>
+     <height>250</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>50</y>
+     <width>430</width>
+     <height>250</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>341</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Executive Members that Should Downgrade</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>10</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Regular Members that Should Upgrade</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="upgradeLabel">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>310</y>
+     <width>211</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Upgrades: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="downgradeLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>310</y>
+     <width>301</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Downgrades: </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
