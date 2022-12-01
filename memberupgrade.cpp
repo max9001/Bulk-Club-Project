@@ -1,5 +1,6 @@
 #include "memberupgrade.h"
 #include "ui_memberupgrade.h"
+#include "global.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,9 +16,9 @@ memberupgrade::memberupgrade(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+    db.setDatabaseName(Path::getDBPath());
 
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();
     QSqlQuery query(db);

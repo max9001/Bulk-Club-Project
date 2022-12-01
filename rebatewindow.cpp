@@ -1,5 +1,6 @@
 #include "rebatewindow.h"
 #include "ui_rebatewindow.h"
+#include "global.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -15,8 +16,8 @@ rebateWindow::rebateWindow(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-    db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
-    db.open();                                                                  //the .db file should be kept within the repository for now
+    db.setDatabaseName(Path::getDBPath());
+    db.open();                                                                  
 
     QSqlTableModel * model = new QSqlTableModel();
     model->setTable("Members");

@@ -13,6 +13,7 @@ INCLUDEPATH += "C://Users/luisr/OneDrive/Desktop/QT stuff/BulkClub-System_v6"
 SOURCES += \
     addmember.cpp \
     admin.cpp \
+    global.cpp \
     itemdisplay.cpp \
     logindialog.cpp \
     main.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
 HEADERS += \
     addmember.h \
     admin.h \
+    global.h \
     itemdisplay.h \
     logindialog.h \
     manageinventory.h \

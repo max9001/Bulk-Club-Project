@@ -1,5 +1,6 @@
 #include "addmember.h"
 #include "ui_addmember.h"
+#include "global.h"
 #include <QRandomGenerator>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -41,10 +42,10 @@ else
    {
    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-   db.setDatabaseName("C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db");//This line and the previous connect to the sqlite database at this file location,
+   db.setDatabaseName(Path::getDBPath());
 
 
-   db.open();                                                                  //the .db file should be kept within the repository for now
+   db.open();                                                                  
 
    QSqlQuery query(db);
    query.prepare("INSERT INTO Members VALUES ((:name),(:id),(:type),(:expiry),(:cost),(:rebate))");
