@@ -19,35 +19,28 @@
 
 class LoginDialog : public QDialog {
     Q_OBJECT
-private:
 
+    private:
+        QLabel* labelUsername;
+        QLabel* labelPassword;
+        QLineEdit* editUsername;
+        QLineEdit* editPassword;
+        QDialogButtonBox* buttons;
+        StoreManager* StoreManagerWindow = NULL;
+        Admin* adminWindow = NULL;
 
+        void setUpGUI();
 
-    QLabel* labelUsername;
+    signals:
+        void acceptLogin( QString& username, QString& password );
+        
+    public:
+        explicit LoginDialog(QWidget* parent = nullptr);
+        void setUsername( QString& username );
+        void setPassword( QString& password );
 
-    QLabel* labelPassword;
-
-    QLineEdit* editUsername;
-
-    QLineEdit* editPassword;
-
-    QDialogButtonBox* buttons;
-
-    void setUpGUI();
-
-    StoreManager* StoreManagerWindow = NULL;
-    Admin* adminWindow = NULL;
-
-public:
-    explicit LoginDialog(QWidget* parent = nullptr);
-    void setUsername( QString& username );
-    void setPassword( QString& password );
-signals:
-    void acceptLogin( QString& username, QString& password );
-public slots:
-
-
-    void slotAcceptLogin();
+    public slots:
+        void slotAcceptLogin();
 };
 
 #endif // LOGINDIALOG_H

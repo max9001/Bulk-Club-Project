@@ -5,17 +5,20 @@
 #include "salesreport.h"
 #include "managemembers.h"
 #include "memberpurchases.h"
-Admin::Admin(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::Admin)
+
+
+Admin::Admin(QWidget *parent) : QMainWindow(parent), ui(new Ui::Admin)
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_DeleteOnClose);
 }
+
 
 Admin::~Admin()
 {
     delete ui;
 }
+
 
 void Admin::on_pushButton_clicked()
 {
@@ -33,12 +36,12 @@ void Admin::on_pushButton_clicked()
     }
 }
 
+
 void Admin::on_actionSales_Report_triggered()
 {
     SalesReportWindow = new SalesReport;
     SalesReportWindow->show();
 }
-
 
 
 void Admin::on_manageMembersPushButton_clicked()
@@ -55,11 +58,9 @@ void Admin::on_memberUpgrade_clicked()
 }
 
 
-
 void Admin::on_exitButton_clicked()
 {
     this->close();
-
 }
 
 
