@@ -45,7 +45,8 @@ void managemembers::on_searchPushButton_clicked()
     db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();
-   //model is readonly access to query results
+    //model is readonly access to query results
+    
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Members WHERE Membership_ID =(:input)");
     query.bindValue(":input", input);
