@@ -1,13 +1,13 @@
-#include <adminwindowWidget.h>
-#include <loginwindow.h>
-
+#include "storemanager.h"
+#include "logindialog.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-	LoginWindow w;
+    LoginDialog w;
+    StoreManager m;
     w.show();
     return a.exec();
 }
