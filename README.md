@@ -72,7 +72,7 @@ A rebate of 2% of the total amount spent (not to include sales tax) is paid at t
 
 <br>
 
-Your program should read from the daily sales file and update the members’ information accordingly. As the sales are processed the total amount spent and rebate data for each member should be updated. Use a sales tax rate of 7 3/4% for all revenue totals.
+Your program should read from the daily sales file and update the members’ information accordingly. As the sales are processed the total amount spent and rebate data for each member should be updated. Use a sales tax rate of 7.75% for all revenue totals.
 
 <br>
 
