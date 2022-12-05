@@ -8,13 +8,14 @@
 #include <QSqlRecord>
 #include "picosha2.h"
 
-LoginDialog::LoginDialog(QWidget* parent)
-    :QDialog(parent)
+
+LoginDialog::LoginDialog(QWidget* parent) : QDialog(parent)
 {
-    setUpGUI();
-    setWindowTitle( tr("User Login") );
-    setModal( true );
+    setUpGUI();                                     // Set up the GUI
+    setWindowTitle( tr("User Login") );             // Set the window title
+    setModal( true );                               // Set the dialog to be modal
 }
+
 
 void LoginDialog::setUpGUI(){
 

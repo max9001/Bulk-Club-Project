@@ -11,29 +11,24 @@ class managemembers;
 class managemembers : public QWidget
 {
     Q_OBJECT
+        
+    private:
+        Ui::managemembers *ui;
+        AddMember* addMemberWindow = NULL;
 
-public:
-    explicit managemembers(QWidget *parent = nullptr);
-    ~managemembers();
+    private slots:
+        void on_searchPushButton_clicked();
+        void on_AddMemberButton_clicked();
+        void on_deletePushButton_clicked();
+        void on_DisplayAllPushButton_clicked();
+        void on_searchLineEdit_returnPressed();
+        void on_deleteMemberLineEdit_returnPressed();
+        void on_ExitButton_clicked();
 
-private slots:
-    void on_searchPushButton_clicked();
+    public:
+        explicit managemembers(QWidget *parent = nullptr);
+        ~managemembers();
 
-    void on_AddMemberButton_clicked();
-
-    void on_deletePushButton_clicked();
-
-    void on_DisplayAllPushButton_clicked();
-
-    void on_searchLineEdit_returnPressed();
-
-    void on_deleteMemberLineEdit_returnPressed();
-
-    void on_ExitButton_clicked();
-
-private:
-    Ui::managemembers *ui;
-    AddMember* addMemberWindow = NULL;
 };
 
 #endif // MANAGEMEMBERS_H

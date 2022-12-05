@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>470</width>
+    <width>478</width>
     <height>747</height>
    </rect>
   </property>
@@ -23,105 +23,117 @@
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
-   <property name="enabled">
-    <bool>true</bool>
+  <widget class="QLineEdit" name="itemSearchBar">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
    </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Bread</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="searchButton">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>0</y>
-     <width>451</width>
-     <height>131</height>
+     <y>10</y>
+     <width>121</width>
+     <height>16</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="topMargin">
-     <number>10</number>
-    </property>
-    <property name="bottomMargin">
-     <number>10</number>
-    </property>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="itemSearchBar">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="placeholderText">
-       <string>Bread</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="itemQuantityTotal">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Item Quantity Total: </string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="itemPriceTotal">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Item Price Total: </string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Enter Item Name:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QPushButton" name="searchButton">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(105, 146, 255)</string>
-      </property>
-      <property name="text">
-       <string>Search</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="pushButton">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(241, 115, 0)</string>
-      </property>
-      <property name="text">
-       <string>Exit</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Enter Item Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="itemPriceTotal">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>321</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Item Price Total: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="itemQuantityTotal">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>321</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Item Quantity Total: </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>40</y>
+     <width>91</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
   </widget>
  </widget>
  <resources/>

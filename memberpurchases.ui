@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>765</width>
-    <height>584</height>
+    <height>614</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,10 +26,10 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>410</y>
-     <width>721</width>
-     <height>156</height>
+     <x>200</x>
+     <y>430</y>
+     <width>341</width>
+     <height>168</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -62,7 +62,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(105, 146, 255)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Search</string>
@@ -100,7 +100,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(105, 146, 255)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Search</string>
@@ -139,7 +139,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(241, 115, 0)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Exit</string>
@@ -154,7 +154,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(105, 146, 255)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Display All</string>
