@@ -2,6 +2,7 @@
 #define MEMBERPURCHASES_H
 
 #include <QWidget>
+#include <QSqlDatabase>
 
 namespace Ui {
 class memberPurchases;
@@ -13,6 +14,7 @@ class memberPurchases : public QWidget
 
     private:
         Ui::memberPurchases *ui;
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
     private slots:
         void on_idSearchButton_clicked();
