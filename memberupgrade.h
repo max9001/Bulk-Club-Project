@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QModelIndex>
+#include <QSqlDatabase>
 
 namespace Ui {
 class memberupgrade;
@@ -22,6 +23,7 @@ private slots:
 private:
     Ui::memberupgrade *ui;
     QModelIndex invalidIndex;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 };
 
 #endif // MEMBERUPGRADE_H
