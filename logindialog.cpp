@@ -109,7 +109,8 @@ void LoginDialog::slotAcceptLogin(){
             StoreManagerWindow = new StoreManager;
             StoreManagerWindow->show();
         }
+    }
+    else { qDebug().noquote() << notFound; }
 
         this->close();
-    }
 }
