@@ -26,6 +26,8 @@ private slots:
     void on_SubmitButton_clicked();
 
 private:
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+
     Ui::newPurchase *ui;
 };
 
