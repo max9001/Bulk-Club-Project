@@ -16,7 +16,7 @@ class AddMember : public QWidget
         Ui::AddMember *ui;
         
     private slots:
-        void on_pushButton_2_clicked();
+        void on_exitWindow_clicked();
         void on_addMemberPushButton_clicked();
         void on_ExpiryLineEdit_returnPressed();
 
