@@ -16,12 +16,9 @@ LoginDialog::LoginDialog(QWidget* parent) : QDialog(parent)
     setModal( true );                               // Set the dialog to be modal
 }
 
-
 void LoginDialog::setUpGUI(){
 
-
     QGridLayout* formGridLayout = new QGridLayout( this );
-
 
     editUsername = new QLineEdit( this );
     editPassword = new QLineEdit( this );
@@ -75,10 +72,8 @@ void LoginDialog::setPassword(QString &password){
 
 void LoginDialog::slotAcceptLogin(){
     QString notFound = "Profile not found, check login information";
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
     db.setDatabaseName(Path::getDBPath());
-
     db.open();                                                                  
 
     QString username = editUsername->text(); //pulls the values from the text edit lines

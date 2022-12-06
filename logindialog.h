@@ -12,6 +12,7 @@
 #include <QGridLayout>
 #include <QStringList>
 #include <QDebug>
+#include <QSqlDatabase>
 #include "storemanager.h"
 #include "admin.h"
 
@@ -38,6 +39,7 @@ class LoginDialog : public QDialog {
         explicit LoginDialog(QWidget* parent = nullptr);
         void setUsername( QString& username );
         void setPassword( QString& password );
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
     public slots:
         void slotAcceptLogin();
