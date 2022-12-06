@@ -5,6 +5,7 @@
 #include <QSqlQueryModel>
 #include <QSqlQuery>
 #include <QSqlRecord>
+#include <QSqlDatabase>
 
 namespace Ui {
 class newPurchase;
@@ -27,6 +28,7 @@ private slots:
 
 private:
     Ui::newPurchase *ui;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 };
 
 #endif // NEWPURCHASE_H
