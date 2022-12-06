@@ -15,7 +15,7 @@ itemDisplay::itemDisplay(QWidget *parent) : QDialog(parent), ui(new Ui::itemDisp
     setAttribute(Qt::WA_DeleteOnClose);
 
     // Set up the database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    //QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -43,7 +43,7 @@ itemDisplay::~itemDisplay()
 void itemDisplay::on_searchButton_clicked()
 {
     // Set up the database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    //QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
