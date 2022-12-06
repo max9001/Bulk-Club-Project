@@ -7,19 +7,19 @@
 #include <QSqlError>
 #include <QMessageBox>
 
-AddMember::AddMember(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::AddMember)
+
+AddMember::AddMember(QWidget *parent) : QWidget(parent), ui(new Ui::AddMember)
 {
     ui->setupUi(this);
-
-
+    setAttribute(Qt::WA_DeleteOnClose);
 }
+
 
 AddMember::~AddMember()
 {
     delete ui;
 }
+
 
 void AddMember::on_pushButton_2_clicked()
 {
@@ -29,53 +29,56 @@ void AddMember::on_pushButton_2_clicked()
 
 void AddMember::on_addMemberPushButton_clicked()
 {
+    
     QString name = ui->nameLineEdit->text();
     QString type = ui->typeLineEdit->text();
     QString expiry = ui->ExpiryLineEdit->text();
-   int id = QRandomGenerator::global()->bounded(11111, 99999);
+    int id = QRandomGenerator::global()->bounded(11111, 99999);
 
-   if (name == "" | type == "" | expiry == "")
-   {
-       QMessageBox::warning(this, "Empty field", "One of your fields is empty");
-   }
-else
-   {
-   QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    if (name == "" | type == "" | expiry == "")
+    {
+        QMessageBox::warning(this, "Empty field", "One of your fields is empty");
+    }
+    else
+    {
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
-   db.setDatabaseName(Path::getDBPath());
+        db.setDatabaseName(Path::getDBPath());
 
+        db.open();                                                                  
 
-   db.open();                                                                  
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO Members VALUES ((:name),(:id),(:type),(:expiry),(:cost),(:rebate))");
 
-   QSqlQuery query(db);
-   query.prepare("INSERT INTO Members VALUES ((:name),(:id),(:type),(:expiry),(:cost),(:rebate))");
+        query.bindValue(":name", name);
+        query.bindValue(":id", id);
+        query.bindValue(":type", type);
+        query.bindValue(":expiry", expiry);
 
-   query.bindValue(":name", name);
-   query.bindValue(":id", id);
-   query.bindValue(":type", type);
-   query.bindValue(":expiry", expiry);
-   if (type.toLower() == "regular"){
-       query.bindValue(":cost",65);
-   }
-   else{
-       query.bindValue(":cost",120);
-   }
-   query.bindValue(":rebate", 0);
+        if (type.toLower() == "regular")
+        {
+            query.bindValue(":cost",65);
+        }
+        else
+        {
+            query.bindValue(":cost",120);
+        }
 
-   if (!query.exec() )
-   {
-       QMessageBox::warning(this, "Query Error", "Query not executed");
-   }
+        query.bindValue(":rebate", 0);
 
-   else
-   {
-       QMessageBox::information(this, "Member Added", "Success");
+        if (!query.exec())
+        {
+            QMessageBox::warning(this, "Query Error", "Query not executed");
+        }
+        else
+        {
+            QMessageBox::information(this, "Success", "Member added successfully");
+        }
 
-   }
-
-   this->close();
+        this->close();
+    }
 }
-}
+
 
 void AddMember::on_ExpiryLineEdit_returnPressed()
 {

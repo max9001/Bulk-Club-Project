@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace Path 
+namespace Path
 {
     // Global Absolute path
     const QString DB_PATH = "C:/Users/jaspl/VS Projects/Bulk-Club-Project/BulkClubProject.db";

@@ -29,7 +29,7 @@
      <x>360</x>
      <y>530</y>
      <width>274</width>
-     <height>62</height>
+     <height>74</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -62,7 +62,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(241, 115, 0)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Remove</string>
@@ -79,7 +79,7 @@
      <x>30</x>
      <y>530</y>
      <width>271</width>
-     <height>62</height>
+     <height>74</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -112,7 +112,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(105, 146, 255)</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Search</string>
@@ -123,13 +123,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>90</x>
      <y>630</y>
      <width>461</width>
-     <height>24</height>
+     <height>38</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -141,7 +141,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(255, 238, 89)</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Add a Member</string>
@@ -156,7 +156,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(105, 146, 255)</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Display All</string>
@@ -171,7 +171,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(241, 115, 0)</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Exit</string>

@@ -138,7 +138,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(105, 146, 255)</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Generate</string>
@@ -177,7 +177,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(105, 146, 255)</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Generate</string>
@@ -219,7 +219,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(241, 115, 0)</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Exit</string>
@@ -240,7 +240,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true"> background-color: rgb(105, 146, 255)</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Generate</string>
@@ -270,7 +270,7 @@
      <x>418</x>
      <y>780</y>
      <width>341</width>
-     <height>18</height>
+     <height>22</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">

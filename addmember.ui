@@ -31,7 +31,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(105, 146, 255)</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Add New Member</string>
@@ -46,7 +46,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(241, 115, 0)</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Exit</string>
@@ -61,7 +61,7 @@
      <x>80</x>
      <y>90</y>
      <width>431</width>
-     <height>82</height>
+     <height>102</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
