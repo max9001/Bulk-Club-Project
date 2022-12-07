@@ -2,38 +2,19 @@
 <ui version="4.0">
  <class>StoreManager</class>
  <widget class="QMainWindow" name="StoreManager">
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>579</width>
-    <height>403</height>
+    <width>584</width>
+    <height>408</height>
    </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Serif</family>
-    <pointsize>15</pointsize>
-   </font>
-  </property>
-  <property name="cursor">
-   <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>Store Manager</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-QPushButton{
-	border: 2px solid rgb(37,39,48);
-	border-radius: 20px;
-	color: #FFF;
-	background-color: rgb(34,36,44);
-	
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="member_rebates">
@@ -92,9 +73,6 @@ QPushButton{
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
@@ -115,9 +93,6 @@ QPushButton{
      <font>
       <pointsize>12</pointsize>
      </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -140,9 +115,6 @@ QPushButton{
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
@@ -154,9 +126,6 @@ QPushButton{
     </property>
    </widget>
    <widget class="QLabel" name="label">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -172,6 +141,19 @@ QPushButton{
     </property>
     <property name="text">
      <string>Welcome Store Manager</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>671</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -193,10 +175,10 @@ QPushButton{
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>340</x>
       <y>10</y>
-      <width>265</width>
-      <height>72</height>
+      <width>240</width>
+      <height>53</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -262,6 +244,7 @@ QPushButton{
     </property>
    </widget>
    <zorder>layoutWidget</zorder>
+   <zorder>graphicsView_2</zorder>
    <zorder>member_rebates</zorder>
    <zorder>member_purchases</zorder>
    <zorder>membership_expiry_search</zorder>

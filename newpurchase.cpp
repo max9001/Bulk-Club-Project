@@ -60,7 +60,7 @@ void newPurchase::on_SubmitButton_clicked()
     model->setQuery(std::move(query));
     record = model->record(0);
     double price = record.value(0).toDouble();
-	//qDebug() << record.value(0).toString();
+    // qDebug() << record.value(0).toString();
 
     QSqlQuery query2(db);
     query2.prepare("INSERT INTO Sales_Record VALUES ((:date),(:id),(:name),(:price),(:quantity))");

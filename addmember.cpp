@@ -15,14 +15,12 @@ AddMember::AddMember(QWidget *parent) : QWidget(parent), ui(new Ui::AddMember)
 }
 
 
-AddMember::~AddMember()
-{
+AddMember::~AddMember() {
     delete ui;
 }
 
 
-void AddMember::on_pushButton_2_clicked()
-{
+void AddMember::on_exitWindow_clicked() {
     this->close();
 }
 
@@ -35,8 +33,7 @@ void AddMember::on_addMemberPushButton_clicked()
     QString expiry = ui->ExpiryLineEdit->text();
     int id = QRandomGenerator::global()->bounded(11111, 99999);
 
-    if (name == "" | type == "" | expiry == "")
-    {
+    if (name == "" | type == "" | expiry == "") {
         QMessageBox::warning(this, "Empty field", "One of your fields is empty");
     }
     else
@@ -55,23 +52,17 @@ void AddMember::on_addMemberPushButton_clicked()
         query.bindValue(":type", type);
         query.bindValue(":expiry", expiry);
 
-        if (type.toLower() == "regular")
-        {
+        if (type.toLower() == "regular") {
             query.bindValue(":cost",65);
         }
-        else
-        {
-            query.bindValue(":cost",120);
-        }
+        else { query.bindValue(":cost",120); }
 
         query.bindValue(":rebate", 0);
 
-        if (!query.exec())
-        {
+        if (!query.exec()) {
             QMessageBox::warning(this, "Query Error", "Query not executed");
         }
-        else
-        {
+        else {
             QMessageBox::information(this, "Success", "Member added successfully");
         }
 
@@ -80,8 +71,7 @@ void AddMember::on_addMemberPushButton_clicked()
 }
 
 
-void AddMember::on_ExpiryLineEdit_returnPressed()
-{
+void AddMember::on_ExpiryLineEdit_returnPressed() {
     on_addMemberPushButton_clicked();
 }
 

@@ -1,12 +1,12 @@
 #include "logindialog.h"
 #include "global.h"
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
+#include <QSql>
+//#include <QSqlDatabase>
+//#include <QSqlError>
+//#include <QSqlQuery>
+//#include <QSqlQueryModel>
 #include <QTableView>
-#include <QSqlRecord>
-#include "picosha2.h"
+//#include <QSqlRecord>
 
 
 LoginDialog::LoginDialog(QWidget* parent) : QDialog(parent)
@@ -79,11 +79,10 @@ void LoginDialog::slotAcceptLogin(){
 
     db.setDatabaseName(Path::getDBPath());
 
-    db.open();                                                                  
+    db.open();
 
     QString username = editUsername->text(); //pulls the values from the text edit lines
     QString password = editPassword->text();
-    std::string passStr = password.toStdString();
 
     QSqlQueryModel model;//model is readonly access to query results
     QSqlRecord record;//record accesses records returned by a query
@@ -94,37 +93,24 @@ void LoginDialog::slotAcceptLogin(){
 
     model.setQuery(std::move(query));
     record = model.record(0); //sets the record to the first record in the query results
-    QString hashToComp = record.value(1).toString();
-    QString salt = record.value(3).toString();
-    passStr.append(salt.toStdString());
 
-    //generates a hash to compare against the value in the db
-    std::vector<unsigned char> hash(picosha2::k_digest_size);
-    picosha2::hash256(passStr.begin(),passStr.end(),hash.begin(),hash.end());
-    std::string saltedHashStr = picosha2::bytes_to_hex_string(hash.begin(),hash.end());
-    QString saltedHash = saltedHash.fromStdString(saltedHashStr);
 
-    bool admin = record.value(2).toBool();
-
-    //if (QString::compare(hashToComp,saltedHash,Qt::CaseSensitive) == 0){
-    if (true){
+    if (password == record.value(1).toString()){
         qDebug().noquote() << "correct login";
+        bool admin = record.value(2).toBool();
 
-        //if(admin){
         if(admin){
             qDebug().noquote() << "Logging in as admin";
             adminWindow = new Admin;
             adminWindow->show();
         }
-        else{
+        else {
             qDebug().noquote() << "Logging in as a user";
             StoreManagerWindow = new StoreManager;
             StoreManagerWindow->show();
         }
+    }
+    else { qDebug().noquote() << notFound; }
 
         this->close();
-    }
-    else{
-        qDebug().noquote() << notFound;
-    }
 }
