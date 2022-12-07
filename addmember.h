@@ -2,6 +2,7 @@
 #define ADDMEMBER_H
 
 #include <QWidget>
+#include <QSqlDatabase>
 
 namespace Ui 
 {
@@ -14,6 +15,7 @@ class AddMember : public QWidget
 
     private:
         Ui::AddMember *ui;
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         
     private slots:
         void on_exitWindow_clicked();

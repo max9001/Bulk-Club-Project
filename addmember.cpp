@@ -38,8 +38,6 @@ void AddMember::on_addMemberPushButton_clicked()
     }
     else
     {
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
         db.setDatabaseName(Path::getDBPath());
 
         db.open();                                                                  

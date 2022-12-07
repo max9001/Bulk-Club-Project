@@ -15,7 +15,6 @@ managemembers::managemembers(QWidget *parent) : QWidget(parent), ui(new Ui::mana
     ui->setupUi(this);
 
     // Set up the database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -45,7 +44,6 @@ void managemembers::on_searchPushButton_clicked()
     QString input = ui->searchLineEdit->text();
 
     // Set up the database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -67,7 +65,6 @@ void managemembers::on_searchPushButton_clicked()
 void managemembers::on_DisplayAllPushButton_clicked()
 {
     // Set up the database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 

@@ -2,6 +2,7 @@
 #define MEMBERSHIPEXPIRY_H
 
 #include <QDialog>
+#include <QSqlDatabase>
 
 namespace Ui {
 class MembershipExpiry;
@@ -25,6 +26,7 @@ private slots:
 
 private:
     Ui::MembershipExpiry *ui;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 };
 
 #endif // MEMBERSHIPEXPIRY_H

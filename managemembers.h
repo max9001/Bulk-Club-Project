@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "addmember.h"
+#include <QSqlDatabase>
 
 namespace Ui {
 class managemembers;
@@ -15,6 +16,7 @@ class managemembers : public QWidget
     private:
         Ui::managemembers *ui;
         AddMember* addMemberWindow = NULL;
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
     private slots:
         void on_searchPushButton_clicked();

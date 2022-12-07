@@ -7,7 +7,6 @@ newPurchase::newPurchase(QWidget *parent) :
     ui(new Ui::newPurchase)
 {
     ui->setupUi(this);
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();
 
@@ -48,7 +47,6 @@ void newPurchase::on_SubmitButton_clicked()
     int quantity = ui->quantityLineEdit->text().toInt();
     QString itemName = ui->itemBox->currentText();
     QSqlRecord record;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();
 

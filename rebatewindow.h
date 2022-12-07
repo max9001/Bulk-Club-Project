@@ -2,6 +2,7 @@
 #define REBATEWINDOW_H
 
 #include <QWidget>
+#include <QSqlDatabase>
 
 namespace Ui {
 class rebateWindow;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::rebateWindow *ui;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 };
 
 #endif // REBATEWINDOW_H
