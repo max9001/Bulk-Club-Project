@@ -208,7 +208,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
           <string/>
          </property>
          <property name="placeholderText">
-          <string>MM/DD/YYYY</string>
+          <string>MMDDYYYY</string>
          </property>
         </widget>
        </item>
