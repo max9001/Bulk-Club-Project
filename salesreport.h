@@ -2,6 +2,7 @@
 #define SALESREPORT_H
 
 #include <QWidget>
+#include <QSqlDatabase>
 
 namespace Ui {
 class SalesReport;
@@ -28,6 +29,7 @@ private slots:
 
 private:
     Ui::SalesReport *ui;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
 };
 

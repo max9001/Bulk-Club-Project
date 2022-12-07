@@ -14,7 +14,6 @@ MembershipExpiry::MembershipExpiry(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  //the .db file should be kept within the repository for no
 
@@ -27,8 +26,6 @@ MembershipExpiry::MembershipExpiry(QWidget *parent) :
 
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-
-
 }
 
 MembershipExpiry::~MembershipExpiry()
@@ -36,11 +33,8 @@ MembershipExpiry::~MembershipExpiry()
     delete ui;
 }
 
-
-
 void MembershipExpiry::on_searchButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -57,16 +51,13 @@ void MembershipExpiry::on_searchButton_clicked()
 
 }
 
-
 void MembershipExpiry::on_cancelButton_clicked()
 {
     close();
 }
 
-
 void MembershipExpiry::on_DisplayAllButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  //the .db file should be kept within the repository for no
 
@@ -80,4 +71,3 @@ void MembershipExpiry::on_DisplayAllButton_clicked()
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
-

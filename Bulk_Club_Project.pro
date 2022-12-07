@@ -40,6 +40,7 @@ HEADERS += \
     memberupgrade.h \
     newpurchase.h \
     picosha2.h \
+    picosha2.h \
     rebatewindow.h \
     salesreport.h \
     storemanager.h

@@ -16,8 +16,6 @@ SalesReport::SalesReport(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
     db.setDatabaseName(Path::getDBPath()); 
 
     db.open();                                                                  
@@ -62,12 +60,7 @@ void SalesReport::on_MemberTypePushButton_clicked()
 {
     if (ui->MemberTypeComboBox->currentText() == "Regular")
     {
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
         db.setDatabaseName(Path::getDBPath());
-
-
         db.open();                                                                  
 
         QSqlQueryModel * model = new QSqlQueryModel();
@@ -101,9 +94,6 @@ void SalesReport::on_MemberTypePushButton_clicked()
 
     if (ui->MemberTypeComboBox->currentText() == "Executive")
     {
-
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName(Path::getDBPath());
         db.open();                                                                  
 
@@ -143,8 +133,6 @@ void SalesReport::on_MemberTypePushButton_clicked()
 void SalesReport::on_DatePushButton_clicked()
 {
     QString date = ui->DatelineEdit->text();
-
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -204,7 +192,6 @@ void SalesReport::on_ExitButton_clicked()
 
 void SalesReport::on_AllTimeButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 

@@ -14,8 +14,6 @@ rebateWindow::rebateWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 

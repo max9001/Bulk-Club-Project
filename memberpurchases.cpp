@@ -13,7 +13,6 @@ memberPurchases::memberPurchases(QWidget *parent) : QWidget(parent), ui(new Ui::
     ui->setupUi(this);
 
     // Set up the database connection
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -58,7 +57,6 @@ memberPurchases::~memberPurchases()
 
 void memberPurchases::on_idSearchButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -95,7 +93,6 @@ void memberPurchases::on_idSearchButton_clicked()
 
 void memberPurchases::on_nameSearchButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(Path::getDBPath());
     db.open();                                                                  
 
@@ -146,11 +143,7 @@ void memberPurchases::on_cancelButton_clicked()
 
 void memberPurchases::on_DisplayAllPushButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
     db.setDatabaseName(Path::getDBPath());
-
-
     db.open();                                                                  
 
     QSqlQueryModel * model0 = new QSqlQueryModel();

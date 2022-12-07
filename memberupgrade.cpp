@@ -14,10 +14,7 @@ memberupgrade::memberupgrade(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
     db.setDatabaseName(Path::getDBPath());
-
     db.open();                                                                  
 
     QSqlQueryModel * model = new QSqlQueryModel();

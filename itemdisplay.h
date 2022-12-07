@@ -2,6 +2,7 @@
 #define ITEMDISPLAY_H
 
 #include <QDialog>
+#include <QSqlDatabase>
 
 namespace Ui 
 {
@@ -14,6 +15,7 @@ class itemDisplay : public QDialog
 
     private:
         Ui::itemDisplay *ui;
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         
     private slots:
         void on_searchButton_clicked();
