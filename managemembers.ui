@@ -210,7 +210,7 @@ background-color: rgb(186, 189, 182);
            <item>
             <widget class="QLineEdit" name="searchLineEdit">
              <property name="placeholderText">
-              <string>6 Digits</string>
+              <string>5 Digits</string>
              </property>
             </widget>
            </item>
@@ -252,7 +252,7 @@ background-color: rgb(186, 189, 182);
            <item>
             <widget class="QLineEdit" name="deleteMemberLineEdit">
              <property name="placeholderText">
-              <string>6 Digits</string>
+              <string>5 Digits</string>
              </property>
             </widget>
            </item>
